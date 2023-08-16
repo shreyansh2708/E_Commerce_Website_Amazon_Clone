@@ -7,6 +7,12 @@
    top: 0;
    z-index: 100;
 }
+.top{
+  height: 60px;
+  background-color: #cd9042;
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .header_logo{
     width: 100px;

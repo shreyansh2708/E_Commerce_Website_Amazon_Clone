@@ -46,16 +46,18 @@ function Payment() {
         getClientSecret();
     }, [basket])
     console.log("The clients secret key is", clientSecret);
-
     const handleSubmit = async (event)=>{
         event.preventDefault();
         setProcessing(true);
         
         //Backend Info
+       
         const payload = await stripe.confirmCardPayment(clientSecret, {
+
             payment_method: {
                 card: elements.getElement(CardElement)
             }
+   
         }).then(({ paymentIntent }) => {
             // paymentIntent = payment confirmation
             db
@@ -68,7 +70,7 @@ function Payment() {
                   amount: paymentIntent.amount,
                   created: paymentIntent.created
               })
-
+            
             setSucceeded(true);
             setError(null)
             setProcessing(false)
@@ -77,7 +79,8 @@ function Payment() {
             });
 
             Navigate('/orders');
-        })
+        }
+        )
     }   
 
     const handleChange = event =>{

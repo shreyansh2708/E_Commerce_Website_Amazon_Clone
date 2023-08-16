@@ -18,7 +18,7 @@ function Home() {
             image="http://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-5.png?v=1658294451"
           />
           <Product
-            d="49538094"
+            id="49538094"
             title="Nikon Mirrorless Z7 II Body with 24-70mm Lens with Additional Battery, Optical Zoom, Black"
             price="89,999"
             rating="⭐⭐⭐⭐"
